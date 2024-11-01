@@ -85,41 +85,64 @@
 // account.withdraw(250)
 // account.withdraw(1000)
 
-class Products {
-    name: string
-    price: number
-    stock : number;
+// class Products {
+//     name: string
+//     price: number
+//     stock : number;
     
 
-    constructor(name: string, price: number, stock: number){
-        this.name = name
-        this.price = price
-        this.stock = stock
-    }
+//     constructor(name: string, price: number, stock: number){
+//         this.name = name
+//         this.price = price
+//         this.stock = stock
+//     }
 
-    isAvailable(): boolean {
-      if(this.stock > 0){
-        // console.log(`Out of stock`);
-        return true
-      }
-      else{
-        // console.log(`you can purchase`);
-        return false
-      }
-    }
+//     isAvailable(): boolean {
+//       if(this.stock > 0){
+//         // console.log(`Out of stock`);
+//         return true
+//       }
+//       else{
+//         // console.log(`you can purchase`);
+//         return false
+//       }
+//     }
 
-    buy(quantity: number): string{
-        if (this.stock >= quantity){
-          this.stock -= quantity
-          return ` Purchase succesfull! ${quantity} ${this.name}(s) bought. Remaining stock: ${this.stock} `            
-        }
-        else{
-            return `Out of stock`
-        }
-    }
+//     buy(quantity: number): string{
+//         if (this.stock >= quantity){
+//           this.stock -= quantity
+//           return ` Purchase succesfull! ${quantity} ${this.name}(s) bought. Remaining stock: ${this.stock} `            
+//         }
+//         else{
+//             return `Out of stock`
+//         }
+//     }
+// }
+
+// const purchase = new Products('Apple', 5, 15)
+// console.log(purchase.isAvailable());
+// console.log(purchase.buy(4));
+// console.log(purchase.buy(4));
+
+let day: number = 0;
+
+switch (day) {
+    case 0: 
+    console.log('Today is Sunday');
+    break;
+
+    case 1: 
+    console.log('Today is Monday');
+    break;
+
+    case 2: 
+    console.log('Today is Tuesday');
+    break;
+
+    case 3: 
+    console.log('Today is Wednesday');
+    break;
+
+    default: 
+    console.log('Selected day does not exist');
 }
-
-const purchase = new Products('Apple', 5, 15)
-console.log(purchase.isAvailable());
-console.log(purchase.buy(4));
-console.log(purchase.buy(4));
